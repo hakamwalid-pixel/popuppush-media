@@ -90,6 +90,27 @@ if EP == "4":
     add(pop(), 10.4, 0.35)                                          # «أووه! عرض»
     add(note(880, 0.25, 1, 0.2, "sine"), 11.4, 0.25); add(note(1175, 0.4, 1, 0.3, "sine"), 11.6, 0.25)  # door chime
     add(whoosh(0.5), 12.3, 0.3)
+elif EP == "6":
+    add(note(196, 0.5, 1, 0.4, "sine") + note(185, 0.5, 0.6, 0.4, "sine"), 0.7, 0.25)
+    add(note(233, 0.35, 1, 0.3, "sine"), 2.6, 0.2)
+    add(whoosh(0.4), 4.4, 0.25); add(pop(), 4.75, 0.4)
+    add(click(), 6.45, 0.6)
+    add(whoosh(0.35), 7.75, 0.3); add(chaching(), 8.0, 0.4); add(cheer(2.2), 8.0, 0.2)   # party mode on all screens
+    for k2, f in enumerate([523.25, 523.25, 587.33, 523.25, 698.46, 659.25]):        # birthday-style chime
+        add(note(f, 0.32, 1, 0.25, "sine"), 8.6 + k2 * 0.3, 0.2)
+    add(pop(), 10.6, 0.35)
+    add(whoosh(0.5), 12.3, 0.3)
+elif EP == "7":
+    add(note(196, 0.5, 1, 0.4, "sine") + note(185, 0.5, 0.6, 0.4, "sine"), 0.7, 0.25)
+    add(note(233, 0.35, 1, 0.3, "sine"), 2.6, 0.2)
+    add(whoosh(0.4), 4.4, 0.25); add(pop(), 4.75, 0.4)
+    add(click(), 6.45, 0.6)
+    add(whoosh(0.35), 7.75, 0.3); add(ding(), 8.0, 0.35)          # countdown appears
+    for k in range(4): add(click(), 8.5 + k * 1.0, 0.25)           # ticking
+    add(pop(), 9.0, 0.3)
+    for k in range(5): add(click(), 9.6 + k * 0.28, 0.12)          # guest walks to the counter
+    add(chaching(), 10.6, 0.45)
+    add(whoosh(0.5), 12.3, 0.3)
 else:
     add(note(196, 0.5, 1, 0.4, "sine") + note(185, 0.5, 0.6, 0.4, "sine"), 0.7, 0.25)
     for k in range(5): add(click(), 2.7 + k * 0.32, 0.12)           # guest walks away
