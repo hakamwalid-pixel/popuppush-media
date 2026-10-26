@@ -73,7 +73,7 @@ def slide(fn, theme, chip, title, accent=None, body=None, items=None, kafu=None,
         d.rounded_rectangle([R - bw, 1110, R, 1200], 45, fill=th["acc"]); T(d, (R - bw / 2, 1155), cta, f, th["bg"], "mm")
     d.line([L, 1250, R, 1250], fill=th["line"], width=2)
     d.text((L, 1290), "popuppush.com", font=font(30, "SemiBold"), fill=th["mute"], anchor="lm")
-    T(d, (R, 1290), "واتساب 0583272051", font(30), th["fg"], "rm")
+    T(d, (R, 1290), "راسلنا واتساب", font(30), th["fg"], "rm")
     if page: d.text((W / 2, 1290), page, font=font(26, "SemiBold"), fill=th["mute"], anchor="mm")
     os.makedirs(OUT, exist_ok=True); img.save(OUT + fn, quality=95)
 
