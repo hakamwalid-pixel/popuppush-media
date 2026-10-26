@@ -82,7 +82,7 @@ add(pop(), 1.0, 0.35)                     # thought bubble
 add(note(233, 0.35, 1, 0.3, "sine"), 2.4, 0.2)
 add(whoosh(0.4), 4.4, 0.25)               # phone comes out
 add(pop(), 4.75, 0.4)
-add(click(), 6.45, 0.6)                   # tap on «قناة ٢»
+add(click(), 6.45, 0.6)                   # tap on «شاشة ٢»
 add(whoosh(0.35), 7.75, 0.3)
 add(ding(), 8.0, 0.35)                    # channel switches
 add(cheer(1.8), 8.0, 0.18)                # crowd swell
