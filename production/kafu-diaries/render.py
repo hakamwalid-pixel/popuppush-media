@@ -81,7 +81,7 @@ def kafu(d, cx, cy, s=1.0, mood="happy", mouth=0, arm=None, phone=0.0, wave=0.0)
 
 def tv(d, x, y, w, h, kind, offer=0.0, flash=0.0):
     d.rounded_rectangle([x - 14, y - 14, x + w + 14, y + h + 14], 22, fill=LIGHT)
-    col, label = {"bein": (GREEN, "بي إن"), "league": (BLUE, "الدوري")}[kind]
+    col, label = {"bein": (GREEN, "قناة ١"), "league": (BLUE, "قناة ٢")}[kind]
     d.rectangle([x, y, x + w, y + h], fill=col)
     d.ellipse([x + w / 2 - 50, y + h / 2 - 50, x + w / 2 + 50, y + h / 2 + 50], outline=(168, 230, 196), width=5)
     d.line([(x + w / 2, y), (x + w / 2, y + h)], fill=(168, 230, 196), width=4)
@@ -136,7 +136,7 @@ def frame(i):
                 d.rounded_rectangle([700 - 200 * k, 600, 700 + 200 * k, 600 + 110 * k], 40, fill=WHITE)
                 if k > 0.9:
                     d.polygon([(620, 706), (660, 706), (610, 750)], fill=WHITE)
-                    text_c(d, 700, 610, "والدوري؟!", F["mid"], NAVY)
+                    text_c(d, 700, 610, "والقناة الثانية؟!", F["mid"], NAVY)
             caption(d, "ماتشين بنفس الوقت؟!" if t < 2.4 else "والشاشات كلها على قناة وحدة…", seg(t, -1 if t < 2.4 else 2.4, (-0.5 if t < 2.4 else 2.7)))
         elif t < 8.0:
             mood, arm, ph = "happy", "phone", seg(t, 4.5, 5.1)
@@ -146,7 +146,7 @@ def frame(i):
             mood, arm, ph = "happy", "phone", 1.0
             mouth = talk(8.4, 12.2)
             if t < 10.3:
-                caption(d, "هذي بي إن… وهذي الدوري", seg(t, 8.3, 8.6))
+                caption(d, "هذي قناة ١… وهذي قناة ٢", seg(t, 8.3, 8.6))
             else:
                 caption(d, "والعرض نزل على كل الشاشات", seg(t, 10.4, 10.7))
         bob = math.sin(t * 3) * 6
@@ -154,7 +154,7 @@ def frame(i):
         if r and r[4] > 0.9:
             px0, py0, px1, py1, _ = r
             sel = 1 if t >= 6.6 else 0
-            for k2, (lab, col) in enumerate([("بي إن", GREEN), ("الدوري", BLUE)]):
+            for k2, (lab, col) in enumerate([("قناة ١", GREEN), ("قناة ٢", BLUE)]):
                 by = py0 + 40 + k2 * 80
                 fill = col if (k2 == 1 and sel) or k2 == 0 else (60, 60, 110)
                 d.rounded_rectangle([px0 + 14, by, px1 - 14, by + 62], 12, fill=fill)
